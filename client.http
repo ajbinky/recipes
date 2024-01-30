@@ -1,0 +1,8 @@
+POST http://localhost:3000/recipes/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Korean Beef Bibimbap",
+    "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_500,q_30,w_1900/hellofresh_s3/image/5ab3b883ae08b53bb4024952-cd6ea4a4.jpg",
+    "servings": 2
+}

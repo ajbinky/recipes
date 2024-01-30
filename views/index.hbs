@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{> header links=links title="Recipes" }}
+<body>
+    <h1>Recipes</h1>
+
+    <div class="container">
+        <div class="row">
+            {{#each recipes}}
+                {{> recipe this}}
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>
