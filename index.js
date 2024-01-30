@@ -25,9 +25,9 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 // Register helper functions
-hbs.registerHelper('url', function(uuid) {
-    return '/recipes/' + uuid;
-});
+hbs.registerHelper('url', (uuid) => '/recipes/' + uuid);
+
+hbs.registerHelper('inc', value => parseInt(value) + 1);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

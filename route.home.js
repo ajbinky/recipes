@@ -6,7 +6,6 @@ const recipeSchema = require('./model.recipe');
 router.get('/', async (req, res) => {
     // Retrieve recipes from the database
     const recipes = await recipeSchema.find();
-    console.log(recipes);
 
     // Render the recipes in the response
     res.render('index', {

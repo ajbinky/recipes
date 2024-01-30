@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-{{> header links=links title="Recipes" }}
-<body>
-    <h1>Recipes</h1>
-
-    <div class="container">
-        <div class="row">
-            {{#each recipes}}
-                {{> recipe this}}
-            {{/each}}
+    {{> header links=links title=name }}
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h2>{{name}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <img src="{{image}}" alt="{{name}}" class="responsive-img">
+                </div>
+                <div class="col s12 m6">
+                    <ul class="collection">
+                        <li class="collection-item"><strong>Servings:</strong> {{servings}}</li>
+                        <li class="collection-item"><strong>Ingredients:</strong></li>
+                        {{#each ingredients}}
+                        <li class="collection-item">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col s12">
+                    <ul class="collection">
+                        <li class="collection-item"><strong>Instructions:</strong></li>
+                        {{#each instructions}}
+                        <li class="collection-item">{{inc @index}}. {{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-</html>
-<!-- Not done yet! Just copied the index hbs file. -->
+    </body>
+    </html>
